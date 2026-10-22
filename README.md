@@ -1,6 +1,10 @@
 # Panda: design system components lose their styles with an app `prefix` or `hash`
 
-Reproduction for a Panda CSS 2.3.0 bug report.
+Reproduction for a Panda CSS bug report. Tested with Panda 2.3.0 and 2.4.0.
+
+Run it locally. It doesn't work on StackBlitz: there Panda uses its WASM compiler, which finds no source files
+(`panda lib` reports `lib: 0 files`). The bug depends on Panda re-reading the design system's files, so the build
+stops with `No fallback source files were available` before it gets that far.
 
 `ds/` is a minimal design system built with `panda lib`. `app/` consumes it through `designSystem` and sets
 `prefix: 'app'`.
