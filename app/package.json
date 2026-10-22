@@ -1,0 +1,13 @@
+{
+  "name": "app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "panda codegen && vite build",
+    "dev": "panda codegen && vite",
+    "dev:redirect": "panda codegen && vite -c vite.config.redirect.mjs"
+  },
+  "dependencies": {
+    "@acme/ds": "1.0.0"
+  }
+}
